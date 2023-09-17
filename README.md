@@ -26,4 +26,4 @@ These Python scripts allow to place, track and delete delivery requests using th
   
   * You can pass a WEBHOOK URL to the uParcel API where the API can later post any updates to the delivery request. These updates are posted in JSON format. You will need a database if you are interested in logging these updates. We accomplished that by posting those updates to a MongoDB database.
   
-  * The uParcel API posts via the WEBHOOK URL only the events made in their portal, but not the events made via the API, such as the creation or cancellation of the delivery requests by our own scripts, so our scripts will need the ability to post those events to the database too. That is what the `push.py` script does.
+  * The uParcel API posts via the WEBHOOK URL only the events made in their portal, but not the events made via the API, such as the creation or cancellation of the delivery requests by our own scripts, so our scripts will need the ability to post those events to the database too. That is what the script `push.py` does.
