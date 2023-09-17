@@ -44,6 +44,8 @@ def req_delivery():
     pickup_pincode = str(input('Enter pickup postal code ['+default_pickup_pincode+']: ') or default_pickup_pincode)
     pickup_remark = str(input('Enter pickup remarks ['+default_pickup_remark+']: ') or default_pickup_remark)
     print('Enter delivery details')
+    delivery_date = str(input("Enter delivery date [YYYY-MM-DD]: ") or "")
+    delivery_time = str(input("Enter delivery time [HH:MM XM-HH:MM XM]: ") or "")
     delivery_name = str(input("Enter receiver's name ["+default_delivery_name+"]: ") or default_delivery_name)
     delivery_contact_number = str(input("Enter receiver's number ["+default_delivery_number+"]: ") or default_delivery_number)
     delivery_email = str(input("Enter receiver's email ["+default_delivery_email+"]: ") or default_delivery_email)
@@ -106,6 +108,8 @@ def req_delivery():
             "delivery_address": delivery_address,
             "delivery_pincode": delivery_pincode,
             "delivery_type": delivery_type,
+            "delivery_date": delivery_date,
+            "delivery_time": delivery_time,
             "delivery_remark": delivery_remark,
             "api_response_url": web_hook
             }
