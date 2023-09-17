@@ -1,6 +1,6 @@
 **Objective**
 
-This Python scripts allow you place, track and delete delivery requests using the uParcel API.
+This Python scripts allows to place, track and delete delivery requests using the uParcel API.
 
 **Requirements**
 
