@@ -114,6 +114,7 @@ def req_delivery():
             "api_response_url": web_hook
             }
         })
+    push(json.loads(payload))
     response = requests.request("POST", url, headers=headers, data=payload)
     print(response.text)
     push(json.loads(json.dumps({
