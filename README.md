@@ -12,7 +12,10 @@ These Python scripts allow to place, track and delete delivery requests using th
 
 * Copy the file `config-sample.py` to `config.py`.
 * Edit `config.py` with your credentials and defaults.
-* To place a delivery request, run `python3 req_delivery.py` and follow the instructions of the script.
+* Inside the folder `JSON files` copy the `default_address.json.sample` to `default_address.json`.
+* Edit `default_address.json` with your defaults for the delivery address.
+* Using `default_address.json` as a template, you may create personalised `.json` files for your frequent delivery addresses.
+* To place a delivery request, run `python3 req_delivery.py <address.json>` and follow the instructions of the script. If you leave the parameter `<address.json>` blank, the script will use the data from `default_address.json`.
 * To track the status of a delivery request, run `python3 track.py <track_id>`, where `<track_id>` is the uParcel trucking code of your delivery.
 * To cancel a delivery request, run `python3 cancel_delivery.py <order_id>`, where `<order_id>` is the Order ID you provided when you made the request *(note that this is NOT the `<track_id>`)*.
 

@@ -5,7 +5,16 @@ from push import *
 import sys
 import base64
 
-def req_delivery():
+def req_delivery(address_file='default_address.json'):
+    f = open("JSON files/"+address_file)
+    address = json.load(f)
+    f.close()
+    default_delivery_name = address['default_delivery_name']
+    default_delivery_number = address['default_delivery_number']
+    default_delivery_email = address['default_delivery_email']
+    default_delivery_address = address['default_delivery_address']
+    default_delivery_pincode = address['default_delivery_pincode']
+    default_delivery_remark = address['default_delivery_remark']
     order_id = int(input('Enter the Order ID: ') or '1')
     url = base_url + "api/merchant/auth/"
     payload = json.dumps({
@@ -123,5 +132,5 @@ def req_delivery():
         })))
     
 if __name__ == '__main__':
-    req_delivery()
+    req_delivery(sys.argv[1])
     
