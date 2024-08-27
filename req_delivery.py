@@ -132,5 +132,8 @@ def req_delivery(address_file='default_address.json'):
         })))
     
 if __name__ == '__main__':
-    req_delivery(sys.argv[1])
+    if len(sys.argv) == 1:
+        req_delivery()
+    else:
+        req_delivery(sys.argv[1])
     
